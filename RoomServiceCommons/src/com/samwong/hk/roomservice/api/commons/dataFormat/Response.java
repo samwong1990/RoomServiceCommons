@@ -3,7 +3,7 @@ package com.samwong.hk.roomservice.api.commons.dataFormat;
 import com.samwong.hk.roomservice.api.commons.parameterEnums.ReturnCode;
 
 public class Response {
-	private ReturnCode returnCode;
+	private ReturnCode returnCode = ReturnCode.OK; // only change this in exceptional case
 	private String explanation;
 
 	public Response(){}

@@ -4,7 +4,7 @@ import java.util.Set;
 
 import net.sf.javaml.core.Instance;
 
-public class Report {
+public class Report{
 	private String algorithm;
 	private String room;
 	private Set<String> otherCandidates;

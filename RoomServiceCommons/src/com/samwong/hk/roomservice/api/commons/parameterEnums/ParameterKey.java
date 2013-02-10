@@ -2,8 +2,16 @@ package com.samwong.hk.roomservice.api.commons.parameterEnums;
 
 public enum ParameterKey {
 	// Client to server:
-	CLASSIFIER, OPERATION, OBSERVATION, ROOM, REPORT, WIFIINFORMATION,
+	CLASSIFIER,		// specifies which classifier(s) to be used
+	SPECIAL_REQUESTS_FOR_SPECFIC_CLASSIFIER,	// expects a serialized string to string map 
+	OPERATION,		// specifies intent: 
+	OBSERVATION, 	// stores the wifi fingerprint
+	ROOM,			// room name, of course
+	BATCH_TRAINING_DATA,	// self explanatory
+	INSTANCE,		// when validating classification, this is the corresponding instance
+	AUENTICATION_DETAILS,	// self explanatory
 	// Server to client:
-	RETURN_CODE, ERROR_EXPLANATION, LIST_OF_ROOMS ;
-
+	RETURN_CODE, 	// See Enum ReturnCode
+	ERROR_EXPLANATION, // String with error details
+	
 }
