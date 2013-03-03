@@ -10,6 +10,16 @@ public class AuthenticationDetails {
 	private String deviceInstallID;
 	private double deviceLatitude;
 	private double deviceLongitude;
+	private float locationAccuracy;
+	
+	public float getLocationAccuracy(){
+		return locationAccuracy;
+	}
+	
+	public AuthenticationDetails withLocationAccuracy(float accuracy){
+		this.locationAccuracy = accuracy;
+		return this;
+	}
 	
 	public String getDeviceWifiMacAddress() {
 		return deviceWifiMacAddress;
@@ -92,5 +102,17 @@ public class AuthenticationDetails {
 	public AuthenticationDetails withDeviceLatitude(double deviceLatitude) {
 		this.deviceLatitude = deviceLatitude;
 		return this;
+	}
+	
+	@Override
+	public String toString() {
+		return "AuthenticationDetails [deviceWifiMacAddress="
+				+ deviceWifiMacAddress + ", deviceBrand=" + deviceBrand
+				+ ", deviceManaufacturer=" + deviceManaufacturer
+				+ ", deviceModel=" + deviceModel + ", deviceProduct="
+				+ deviceProduct + ", deviceSerial=" + deviceSerial
+				+ ", deviceInstallID=" + deviceInstallID + ", deviceLatitude="
+				+ deviceLatitude + ", deviceLongitude=" + deviceLongitude
+				+ ", locationAccuracy=" + locationAccuracy + "]";
 	}
 }

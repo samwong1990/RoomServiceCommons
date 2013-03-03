@@ -28,6 +28,7 @@ public class WifiInformation {
 	
 	@Override
 	public String toString() {
-		return String.format("SignalStrengths %s, Notes: %s", notes, signalStrengths.toString());
+		return "WifiInformation [signalStrengths=" + signalStrengths
+				+ ", notes=" + notes + "]";
 	}
 }

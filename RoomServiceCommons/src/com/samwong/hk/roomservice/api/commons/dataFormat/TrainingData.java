@@ -23,5 +23,11 @@ public class TrainingData {
 		this.datapoints = datapoints;
 		return this;
 	}
+	
+	@Override
+	public String toString() {
+		return "TrainingData [datapoints=" + datapoints + ", room=" + room
+				+ "]";
+	}
 
 }

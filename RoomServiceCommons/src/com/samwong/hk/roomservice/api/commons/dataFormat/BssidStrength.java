@@ -29,6 +29,6 @@ public class BssidStrength {
 	
 	@Override
 	public String toString() {
-		return BSSID + ":" + level + "dBm";
+		return "BssidStrength [BSSID=" + BSSID + ", level=" + level + "]";
 	}
 }

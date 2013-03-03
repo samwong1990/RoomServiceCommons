@@ -13,5 +13,9 @@ public class ResponseWithReports extends Response{
 	public List<Report> getReports() {
 		return reports;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "ResponseWithReports [reports=" + reports + "]";
+	}
 }

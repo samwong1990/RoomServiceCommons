@@ -77,8 +77,9 @@ public class Report{
 
 	@Override
 	public String toString() {
-		return String.format("Room: %s, Notes: %s, Instance: %s", room, notes,
-				instance);
+		return "Report [algorithm=" + algorithm + ", room=" + room
+				+ ", otherCandidates=" + otherCandidates + ", notes=" + notes
+				+ ", instance=" + instance + "]";
 	}
 
 }
