@@ -1,5 +1,6 @@
 package com.samwong.hk.roomservice.api.commons.dataFormat;
 
+import java.util.Collections;
 import java.util.Set;
 
 import net.sf.javaml.core.Instance;
@@ -7,7 +8,7 @@ import net.sf.javaml.core.Instance;
 public class Report{
 	private String algorithm;
 	private String room;
-	private Set<String> otherCandidates;
+	private Set<String> otherCandidates = Collections.emptySet();
 	private String notes;
 	private Instance instance;
 

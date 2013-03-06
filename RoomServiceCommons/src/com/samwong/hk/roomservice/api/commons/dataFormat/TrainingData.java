@@ -1,9 +1,10 @@
 package com.samwong.hk.roomservice.api.commons.dataFormat;
 
+import java.util.Collections;
 import java.util.List;
 
 public class TrainingData {
-	private List<WifiInformation> datapoints;
+	private List<WifiInformation> datapoints = Collections.emptyList();
 	private String room;
 	
 	public TrainingData withRoom(String room){

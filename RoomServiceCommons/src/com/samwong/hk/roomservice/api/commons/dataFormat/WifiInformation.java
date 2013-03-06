@@ -1,9 +1,10 @@
 package com.samwong.hk.roomservice.api.commons.dataFormat;
 
+import java.util.Collections;
 import java.util.Set;
 
 public class WifiInformation {
-	private Set<BssidStrength> signalStrengths;
+	private Set<BssidStrength> signalStrengths = Collections.emptySet();
 	private String notes;
 	
 	public WifiInformation(){}
