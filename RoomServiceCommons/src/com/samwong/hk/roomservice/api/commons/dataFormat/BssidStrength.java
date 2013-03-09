@@ -31,4 +31,17 @@ public class BssidStrength {
 	public String toString() {
 		return "BssidStrength [BSSID=" + BSSID + ", level=" + level + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof BssidStrength){
+			return BSSID.equals(((BssidStrength) obj).getBSSID()) && level == ((BssidStrength) obj).getLevel();
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return BSSID.hashCode() ^ level; 
+	}
 }

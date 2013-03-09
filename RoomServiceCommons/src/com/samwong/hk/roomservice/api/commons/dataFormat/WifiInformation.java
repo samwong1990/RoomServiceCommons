@@ -32,4 +32,22 @@ public class WifiInformation {
 		return "WifiInformation [signalStrengths=" + signalStrengths
 				+ ", notes=" + notes + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof WifiInformation){
+			return signalStrengths.equals(((WifiInformation) obj).getSignalStrengths());
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		// It's a set so I didn't bother with shifting.
+		int xorAllSignalStrengths = 0;
+		for(BssidStrength signalStrength : signalStrengths){
+			xorAllSignalStrengths ^= signalStrength.hashCode();
+		}
+		return xorAllSignalStrengths;
+	}
 }
