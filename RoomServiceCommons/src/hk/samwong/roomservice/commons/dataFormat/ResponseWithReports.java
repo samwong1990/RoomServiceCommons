@@ -17,6 +17,6 @@ public class ResponseWithReports extends Response{
 
 	@Override
 	public String toString() {
-		return "ResponseWithReports [reports=" + reports + "]";
+		return "ResponseWithReports [reports=" + reports + "]" + super.toString();
 	}
 }

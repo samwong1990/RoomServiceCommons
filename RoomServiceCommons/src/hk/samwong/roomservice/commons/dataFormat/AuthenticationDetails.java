@@ -3,7 +3,7 @@ package hk.samwong.roomservice.commons.dataFormat;
 public class AuthenticationDetails {
 	private String deviceWifiMacAddress;
 	private String deviceBrand;
-	private String deviceManaufacturer;
+	private String deviceManufacturer;
 	private String deviceModel;
 	private String deviceProduct;
 	private String deviceSerial;
@@ -40,13 +40,13 @@ public class AuthenticationDetails {
 		return this;
 	}
 
-	public String getDeviceManaufacturer() {
-		return deviceManaufacturer;
+	public String getDeviceManufacturer() {
+		return deviceManufacturer;
 	}
 
-	public AuthenticationDetails withDeviceManaufacturer(
-			String deviceManaufacturer) {
-		this.deviceManaufacturer = deviceManaufacturer;
+	public AuthenticationDetails withDeviceManufacturer(
+			String deviceManufacturer) {
+		this.deviceManufacturer = deviceManufacturer;
 		return this;
 	}
 
@@ -108,7 +108,7 @@ public class AuthenticationDetails {
 	public String toString() {
 		return "AuthenticationDetails [deviceWifiMacAddress="
 				+ deviceWifiMacAddress + ", deviceBrand=" + deviceBrand
-				+ ", deviceManaufacturer=" + deviceManaufacturer
+				+ ", deviceManufacturer=" + deviceManufacturer
 				+ ", deviceModel=" + deviceModel + ", deviceProduct="
 				+ deviceProduct + ", deviceSerial=" + deviceSerial
 				+ ", deviceInstallID=" + deviceInstallID + ", deviceLatitude="
