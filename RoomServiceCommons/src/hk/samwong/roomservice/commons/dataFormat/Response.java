@@ -3,7 +3,7 @@ package hk.samwong.roomservice.commons.dataFormat;
 import hk.samwong.roomservice.commons.parameterEnums.ReturnCode;
 
 public class Response {
-	private ReturnCode returnCode = ReturnCode.OK; // only change this in exceptional case
+	private ReturnCode returnCode = ReturnCode.OK; // defaults to OK, only change this in exceptional case
 	private String explanation;
 
 	public Response(){}
@@ -12,11 +12,7 @@ public class Response {
 		return returnCode;
 	}
 
-	public void setReturnCode(ReturnCode returnCode) {
-		this.returnCode = returnCode;
-	}
-
-	public Response withReturnCode(ReturnCode returnCode) {
+	public Response setReturnCode(ReturnCode returnCode) {
 		this.returnCode = returnCode;
 		return this;
 	}
@@ -25,14 +21,11 @@ public class Response {
 		return explanation;
 	}
 
-	public void setExplanation(String explanation) {
-		this.explanation = explanation;
-	}
-	
-	public Response withExplanation(String explanation) {
+	public Response setExplanation(String explanation) {
 		this.explanation = explanation;
 		return this;
 	}
+	
 	
 	@Override
 	public String toString() {

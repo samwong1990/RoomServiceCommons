@@ -13,7 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/javaml-0.1.7.jar" sourcepath="/Users/wongsam/Dropbox/Computing/MSci Project/eclipseWorkspace/RoomServiceServlet/lib/javaml-0.1.7-src.zip"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/new apache tomcat7 server 8 jun">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.utility"/>
 		</attributes>

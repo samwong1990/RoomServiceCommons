@@ -5,53 +5,41 @@ import java.util.Set;
 
 import net.sf.javaml.core.Instance;
 
-public class Report{
+public class Report {
 	private String algorithm;
-	private String room;
-	private Set<String> otherCandidates = Collections.emptySet();
+	private Label bestMatch;
+	private Set<Label> otherCandidates = Collections.emptySet();
 	private String notes;
 	private Instance instance;
 
-	public Report(Instance instance) {
+	public Report(Instance instance){
 		this.instance = instance;
 	}
-
+	
 	public String getAlgorithm() {
 		return algorithm;
 	}
 
-	public void setAlgorithm(String algorithm) {
+	public Report setAlgorithm(String algorithm) {
 		this.algorithm = algorithm;
-	}
-
-	public Report withAlgorithm(String algorithmName) {
-		this.algorithm = algorithmName;
 		return this;
 	}
 
-	public Set<String> getCandidates() {
+	public Label getBestMatch() {
+		return bestMatch;
+	}
+
+	public Report setBestMatch(Label bestMatch) {
+		this.bestMatch = bestMatch;
+		return this;
+	}
+
+	public Set<Label> getOtherCandidates() {
 		return otherCandidates;
 	}
 
-	public void setOtherCandidates(Set<String> otherCandidates) {
+	public Report setOtherCandidates(Set<Label> otherCandidates) {
 		this.otherCandidates = otherCandidates;
-	}
-
-	public Report withCandidates(Set<String> otherCandidates) {
-		this.otherCandidates = otherCandidates;
-		return this;
-	}
-
-	public String getRoom() {
-		return room;
-	}
-
-	public void setRoom(String room) {
-		this.room = room;
-	}
-
-	public Report withRoom(String room) {
-		this.room = room;
 		return this;
 	}
 
@@ -59,28 +47,25 @@ public class Report{
 		return notes;
 	}
 
+	public Report setNotes(String notes) {
+		this.notes = notes;
+		return this;
+	}
+
 	public Instance getInstance() {
 		return instance;
 	}
 
-	public void setInstance(Instance instance) {
+	public Report setInstance(Instance instance) {
 		this.instance = instance;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
-
-	public Report withNotes(String notes) {
-		this.notes = notes;
 		return this;
 	}
 
 	@Override
 	public String toString() {
-		return "Report [algorithm=" + algorithm + ", room=" + room
-				+ ", otherCandidates=" + otherCandidates + ", notes=" + notes
-				+ ", instance=" + instance + "]";
+		return String
+				.format("Report [algorithm=%s, bestMatch=%s, otherCandidates=%s, notes=%s, instance=%s]",
+						algorithm, bestMatch, otherCandidates, notes, instance);
 	}
 
 }
